@@ -3,9 +3,12 @@ import "./App.css";
 import MainSearch from "./components/MainSearch";
 import CompanySearchResults from "./components/CompanySearchResults";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SideBar from "./components/SideBar";
+
 function App() {
   return (
     <BrowserRouter>
+      <SideBar />
       <Routes>
         <Route path="/" element={<MainSearch />} />
         <Route path="/:companyName" element={<CompanySearchResults />} />
